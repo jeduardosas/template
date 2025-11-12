@@ -1,0 +1,66 @@
+.footer{
+  background-color: #fff;
+  color:#666;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:40px 20px;
+  margin-top: 60px;
+  text-align: center;
+
+}
+.footer-logo{
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+.footer-text{
+  font-size:12px;
+  font-style: italic;
+  color:#555;
+  margin: 0;
+}
+.footer-text span{
+  font-weight: bold;
+  color:#333;
+}
+.footer-line{
+  width: 40px;
+  height: 1px;
+  background-color:#ccc;
+  margin: 20px auto;
+}
+.footer-copy{
+  display:block;
+  font-size:12px;
+  color:#aaa;
+  margin-top: 10px;
+}
+
+
+/*ANIMACION DEL CORAZON*/
+.footer-titulo{
+  display: flex;
+  gap: 5px;
+}
+.heart p {
+  font-size: 12px;        /* tamaño del corazón */
+  color: #ed93aa;         /* color del corazón */
+  display: inline-block;
+  animation: beat 4s infinite;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+

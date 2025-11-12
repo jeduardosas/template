@@ -1,0 +1,16 @@
+.atom-boton{
+  display: inline;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.semiredondo{
+  border-top-right-radius: 0.50rem;
+}
+.redondo{
+  border-radius: 0.50rem;
+}

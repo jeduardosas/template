@@ -1,0 +1,21 @@
+.modal-tittle-1{
+  margin:20px 0;
+}
+
+@media (min-width: 768px) {
+    .modal-imagen-contenedor img{
+      width:25% !important;
+    }
+}
+.modal-tittle-2 p{
+  font-size: 35px;
+  color: #fff;
+}
+ 
+.modal-content{
+  margin-bottom: 20px;
+  font-style: italic;
+  font-size: 18px;
+  color: #fff;
+}
+

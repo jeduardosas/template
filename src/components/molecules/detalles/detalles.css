@@ -1,0 +1,48 @@
+
+.detalles-container {
+  text-align: center;
+ 
+}
+
+.detalles-titulo {
+  font-size:50px;
+  font-family: var(--fuenteCursiva);
+}
+
+/* Contenido desplegable */
+.detalles-contenido {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.7s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.detalles-item h3{
+  font-family:var(--fuenteSecundaria);
+  font-weight:bold;
+  margin:30px 0;
+}
+.detalles-item-texto{
+  margin-bottom:20px
+}
+.detalles-item p{
+  margin-bottom:10px;
+  font-size:16px;
+  font-family:var(--fuenteTerciaria);
+  color:#acacac;
+}
+.detalles-item div p{
+  margin-bottom: 10px;
+}
+.detalles-item div {
+  margin:30px 0;
+}
+
+.detalles-contenido.mostrar {
+  max-height: 1000px; /* suficiente para contener tarjetas */
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,131 @@
+/*CONFIRMACION */
+.card-confirmacion h3{
+  text-align:center;
+  color:#acacac;
+  margin-bottom:30px;
+  font-family: var(--fuenteSecundaria);
+
+}
+.card-confirmacion p{
+  text-align:center;
+  font-family:var(--fuenteTerciaria);
+  font-size:16px;
+}
+.card-confirmacion-boton{
+  margin-top:30px;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.card-confirmacion-boton button{
+  background-color: var(--colorFondo);
+  color: var(--colorTexto);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--fuentePrincipal);
+  font-size:16px;
+  transition: background-color 0.3s ease;
+} 
+.formulario{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.7s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.formulario{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.formulario-item{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.formulario-item input{
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.formulario-item placeholder{
+  color: #999;
+  font-style: italic;
+}
+.formulario-item input:focus {
+  outline: none;
+  border-color: var(--colorTexto); /* tono dorado elegante */
+  box-shadow: 0 0 6px rgba(184, 156, 101, 0.4);
+  background-color: #fff;
+  
+}
+.formulario-item select{
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 16px;
+  appearance: none; /* quita la flechita por defecto */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path fill='%23999' d='M0 0l6 8 6-8z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.formulario-item select:focus{
+  outline: none;
+  border-color: var(--colorTexto); /* igual que el input */
+  box-shadow: 0 0 6px rgba(184, 156, 101, 0.4);
+  background-color: #fff;
+}
+.formulario-boton{
+  margin-top:30px;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-color: var(--colorFondo);
+  color: var(--colorTexto);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--fuentePrincipal);
+  font-size:16px;
+  transition: background-color 0.3s ease;
+}
+.formulario.mostrar{
+  max-height: 500px; /* o lo que quieras */
+  opacity: 1;
+  transform: translateY(0);
+}
+.div-mensaje{
+  border-radius:5px;
+  border: solid thin var(--colorTexto);
+  padding:2px 1px;
+}
+.div-mensaje p{
+  font-family: var(--fuenteTerciaria);
+  font-size:14px;
+}

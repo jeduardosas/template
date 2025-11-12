@@ -1,0 +1,115 @@
+/*FONDO */
+.imagen-fondo{
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* clave: evita la distorsión */
+  z-index: -1;       /* para que quede detrás del contenido */
+}
+
+/*HEADER*/
+.card-header{
+  
+}
+.card-header h1{
+  color:var(--colorTexto);
+  font-family:var(--fuenteCursiva);
+  text-align:center;
+  font-size:40px
+}
+.card-header h2{
+  text-align:center;
+  color:#acacac;
+  font-style:italic;
+  font-size:18px;
+}
+.card-header div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+}
+
+/*PAPAS*/
+.card-papas p{
+  
+  text-align:center;
+  font-family: var(--fuenteSecundaria);
+  color:#acacac;
+  font-size:18px;
+}
+.card-papas p:last-of-type{
+  margin-top:30px;
+}
+.card-papas h2{
+  color:var(--colorTexto);
+  text-align:center;
+  font-family: var(--fuenteTerciaria);
+  font-size: 16px;
+}
+
+/*ORACION*/
+.banner-oracion{
+  margin:0 0 100px 0;
+}
+
+/*UBICACIONES*/
+.card-horarios{
+  margin-top:-10px;
+}
+.card-horarios div{
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.card-horarios-titulo{
+  font-size: 24px;
+  font-family: var(--fuenteSecundaria);
+  color:#acacac;
+}
+.card-horarios-item h2{
+  font-size:16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:var(--colorTexto);
+}
+.card-horarios-direccion{
+  font-family: var(--fuenteSecundaria);
+}
+.card-horarios-direccion p{
+  font-size: 15px;
+  text-align:center;
+}
+/*CONFIRMACION*/
+.lugares{
+  width:100%;
+  background-color: var(--colorPrincipal);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:var(--fuenteSecundaria);
+  padding:20px 0;
+}
+.lugares p{
+  font-size: 30px;
+}
+.lugares h2{
+  font-size: 120px;
+}
+.lugares span{
+  margin-top:-30px;
+  font-size: 28px;
+  font-style: italic;
+  font-family:var(--fuentePrincipal);
+
+}
+.banner-dress{
+  margin-top:30px;
+}
+

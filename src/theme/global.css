@@ -1,0 +1,44 @@
+.sombra{
+  box-shadow: 0 6px 4px var(--colorSombra);
+}
+/* C O L O  R E S   P A R A   F O N D O */
+.bgPrincipal{
+  background-color: var(--colorPrincipal);
+}
+.bgSecundario{
+  background-color: var(--colorSecundario);
+}
+
+/* T E X T O */
+.textBold{
+  font-weight: bold;
+}
+.textBlanco{
+  color:var(--blanco)
+}
+.textNegro{
+  color:var(--negro)
+}
+.textPrincipal{
+  color:var(--colorPrincipal);
+}
+.textSecundario{
+  color:var(--colorSecundario);
+}
+.textFondo{
+  color:var(--colorFondo)
+}
+
+/* R E D O N D E A R */
+.redondoArribaIzquierda{
+  border-top-left-radius:10px ;
+}
+.redondoArribaDerecha{
+  border-top-right-radius: 10px;
+}
+.redondoAbajoIzquierda{
+  border-bottom-left-radius: 10px;
+}
+.redondoAbajoDerecha{
+  border-bottom-right-radius: 10px;
+}

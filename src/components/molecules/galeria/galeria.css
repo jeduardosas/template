@@ -1,0 +1,16 @@
+
+
+.galeria img {
+  box-shadow: 0 0 0 rgba(220,189,115,0); /* dorado transparente */
+  transition: box-shadow .4s ease, transform .4s ease;
+}
+
+/* cuando se ve en pantalla (y hover) aplicamos un halo sutil */
+.galeria img:hover {
+  box-shadow: 0 0 22px rgba(220,189,115,.40);
+  transform: scale(1.03);
+}
+
+.img-galeria{
+  margin-bottom:50px;
+}

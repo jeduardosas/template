@@ -1,0 +1,73 @@
+.hotel-wrapper {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hotel-title {
+  font-size: 25px;
+  margin-bottom: 1.3rem;
+  font-weight: 600;
+}
+
+.hotel-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.hotel-card {
+  margin-bottom:30px;
+  padding-bottom:20px;
+  border-bottom:solid rgba(85, 85, 85, .8) 0.1px;
+  backdrop-filter: blur(6px);
+}
+.hotel-direccion{
+  margin:0 0 20px 0;
+}
+.hotel-direccion p{
+  font-size:16px;
+  color:var(--colorTexto);
+  line-height: 15px;
+  
+}
+
+.hotel-card h3 {
+  font-family:var(--fuenteSecundaria);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hotel-card p {
+  margin: .15rem 0;
+  font-size: 12px;
+  opacity: .9;
+}
+
+.hotel-btns {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: .8rem;
+}
+
+.btn {
+  font-size: .9rem;
+  padding: .5rem .9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color:var(--colorFondo);
+  color:var(--colorTexto);
+}
+
+
+
+.star-rating {
+  font-size: 1rem;
+  color: #f5a623; /* dorado suave para estrellas */
+  display: inline-block;
+  margin-bottom: .3rem;
+}
+.rating-number {
+  font-size: .9rem;
+  color: #555;
+  margin-left: .4rem;
+}

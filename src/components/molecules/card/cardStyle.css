@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-family:var(--fuentePrincipal);
+  background: white;
+  margin: 50px auto;
+}
+
+
+
+/* ---------- VARIANTES ---------- */
+
+/* Minimal */
+.card-minimal {
+  background: white;
+  border: 1px solid #ddd;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Elegante */
+.card-elegante {
+  background: linear-gradient(135deg, #fffaf7, #f9f3f0);
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  color: #2c2c2c;
+}
+
+/*Papel*/
+.card-papel {
+  background:var(--colorPrincipal); /* blanco marfil */
+  border: 1px solid var(--colorTexto);
+  border-radius: 0; /* esquinas rectas, como hoja */
+  color: var(--colorTexto);
+  box-shadow:
+    0 6px 6px rgba(0, 0, 0, 0.06),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--fuentePrincipal); /* elegante */
+}
+.card-papel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,0.02) 1px, transparent 0) repeat;
+  background-size: 8px 8px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+
