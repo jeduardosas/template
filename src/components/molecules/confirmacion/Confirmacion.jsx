@@ -16,6 +16,7 @@ const Confirmacion = ({data, pases}) => {
   const [abierto, setAbierto] = useState(false);
   const [enviado, setEnviado] = useState(false);
   const [nombre, setNombre] = useState('');
+  const [telefonoSeleccionado, setTelefonoSeleccionado] = useState(null);
   const [numeroPersonas, setNumeroPersonas] = useState(1);
   const [error, setError] = useState(false);
 
@@ -29,11 +30,13 @@ const Confirmacion = ({data, pases}) => {
       return;
     }
     const link = obtenerTextoFormulario({
-    nombreInvitado: nombre,
-    numero: numeroPersonas,
-    nombreQuinceañera:data.nombre,
-    tipoEvento: data.type,
-    numeroTelefono: data.confirmacion // <-- tu data ya la tiene si no me equivoco
+      nombreInvitado: nombre,
+      numero: numeroPersonas,
+      nombreQuinceañera: data.nombre,
+      tipoEvento: data.type,
+      nombreNovio: data.nombreNovio,
+      nombreNovia: data.nombreNovia,
+      numeroTelefono: telefonoSeleccionado
   });
 
   window.open(link, '_blank');
@@ -46,15 +49,28 @@ const Confirmacion = ({data, pases}) => {
             as={Card}
             ajustes={{ancho:'80%', variante:'papel', clase:'card-confirmacion'}} 
             animacion={
-             { hidden: { opacity: 0, y: 100 },
+              { hidden: { opacity: 0, y: 100 },
               visible: { opacity: 1, y: 0 },}
             }
             duracion={1}
           >
               <div style={{display:'flex', flexDirection:'column',alignItems:'center',justifyContent:'center',marginBottom:'30px'}}><Imagen ajustes={{imagen:'./img/confirmacion.webp', ancho:'80%'}} /></div>
               <p>Tu presencia hará inolvidable este día. Te pedimos amablemente confirmar tu asistencia, gracias.</p>
-              <div className='card-confirmacion-boton'>
-                {abierto || enviado ?  '' : <button onClick={()=>{setAbierto(true)}} >Confirmar</button>}
+              <div className={`${data.confirmacion.length === 1 ? 'card-confirmacion-boton-contenedor' : 'card-confirmacion-boton-contenedor2'}`}>
+                {!abierto && !enviado &&
+                  data.confirmacion.map((item) => (
+                    <button
+                      className='card-confirmacion-boton'
+                      key={item.id}
+                      onClick={() => {
+                        setTelefonoSeleccionado(item.telefono);
+                        setAbierto(true);
+                      }}
+                    >
+                      {item.label}
+                    </button>
+                  ))
+                }
               </div>
 
 

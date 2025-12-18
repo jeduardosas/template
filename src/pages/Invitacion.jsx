@@ -1,21 +1,26 @@
 import { useState } from 'react';
 import {useLocation, Navigate} from 'react-router-dom';
 import Modal from "react-modal";
-import Reproductor from '../components/molecules/reproductor/Reproductor.jsx';
-import Card from '../components/molecules/card/Card.jsx';
-import AnimarElemento from '../components/molecules/animarElemento/AnimarElemento.jsx'
-import Contador from '../components/molecules/contador/Contador.jsx';
-import TimeLine from '../components/molecules/timeline/TimeLine.jsx';
-import Detalles from '../components/molecules/detalles/Detalles.jsx';
-import Imagen from '../components/atoms/imagen/Imagen.jsx';
-import Banner from '../components/molecules/banner/Banner.jsx';
-import Galeria from '../components/molecules/galeria/Galeria.jsx';
-import Icono from '../components/atoms/iconos/Icono.jsx';
-import Boton from '../components/atoms/button/Boton.jsx';
-import Confirmacion from '../components/molecules/confirmacion/Confirmacion.jsx';
-import Hoteles from '../components/molecules/hoteles/Hoteles.jsx';
-import Footer from '../components/molecules/footer/Footer.jsx';
-import {Iglesia, Recepcion, Novia, Novio} from '../components/atoms/iconos/Index.jsx';
+import {
+    Reproductor,
+    Contador,
+    Card,
+    AnimarElemento,
+    TimeLine,
+    Detalles,
+    Imagen,
+    Banner,
+    Galeria,
+    Icono,
+    Boton,
+    Confirmacion,
+    Hoteles,
+    Footer ,
+    Iglesia, 
+    Recepcion, 
+    Novia,
+    Novio,
+} from '../components/index.js';
 import getData from '../../data.js';
 import {obtnerTextoConfirmacion} from '../functions/obtenerTextoConfirmacion.js'
 import '../styles/modal.css';
@@ -23,7 +28,7 @@ import '../styles/invitacion.css';
 
 const Invitacion = () => {
   const data = getData('xv');
-  console.log(data)
+  
   const song = './music/song.mp3'
 
   const [play,setPlay] = useState(false); //estado para manejar la reproduccion del audio
@@ -109,7 +114,12 @@ const Invitacion = () => {
         <>
           <Reproductor song={song} />
           <Banner 
-            ajustes={{imagen:'./img/images/2.webp', anchoImagen:'100%', anchoContenedor:'100%', clase:'banner-oracion', altoContenedor:'auto'}} />
+            ajustes={{
+                      imagen:'./img/images/2.webp', 
+                      anchoImagen:'100%', 
+                      anchoContenedor:'100%', 
+                      clase:'banner-oracion', 
+                      altoContenedor:'auto'}} />
           <AnimarElemento
             as={Card}
             ajustes={{variante:'papel', ancho:'80%',clase:'card-header'}}
@@ -135,12 +145,39 @@ const Invitacion = () => {
               visible: { opacity: 1, y: 0 },
             }}
             duracion={1}>
-            <p>En compañia de mis padres</p>
-            <h2>{data.padres.papa}</h2>
-            <h2>{data.padres.mama}</h2>
-            <p>Y de mis padrinos</p>
-            <h2>{data.padrinos.padrino}</h2>
-            <h2>{data.padrinos.madrina}</h2>
+            {data.type === "boda" && (
+              <>
+                <p>En compañia de nuestros padres</p>
+                <h2>{data.padresNovio.papa}</h2>
+                <h2>{data.padresNovio.mama}</h2>
+                <h2>{data.padresNovia.papa}</h2>
+                <h2>{data.padresNovia.mama}</h2>
+                <p>Y de nuestros padrinos</p>
+                <h2>{data.padrinos.padrino}</h2>
+                <h2>{data.padrinos.madrina}</h2>
+              </>
+            )}
+            {data.type === "xv" && (
+              <>
+                <p>En compañia de mis padres</p>
+                <h2>{data.padres.papa}</h2>
+                <h2>{data.padres.mama}</h2>
+                <p>Y de mis padrinos</p>
+                <h2>{data.padrinos.padrino}</h2>
+                <h2>{data.padrinos.madrina}</h2>
+              </>
+            )}
+
+            {data.type === "bautizo" && (
+              <>
+                <p>En compañia de mis padres</p>
+                <h2>{data.padres.papa}</h2>
+                <h2>{data.padres.mama}</h2>
+                <p>Y de mis padrinos</p>
+                <h2>{data.padrinos.padrino}</h2>
+                <h2>{data.padrinos.madrina}</h2>
+              </>
+            )}
           </AnimarElemento>
           
           <Banner ajustes={{imagen:'./img/oracion.webp', anchoImagen:'100%', anchoContenedor:'100%', clase:'banner-oracion'}} />

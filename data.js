@@ -122,30 +122,41 @@ const datosComunes = {
 }
 
 const tipoevento={
-  type:'',
+  
   boda:{
-    nombreNovia:'',
-    nombreNovio:'',
+    type:'boda',
+    nombreNovia:'katia',
+    nombreNovio:'pepe',
     padresNovia:{
-      papa:' ',
-      mama:''
+      papa:'Marin Sanmartin',
+      mama:'Clara Ascencio'
     },
     padresNovio:{
-      papa:'',
-      mama:'',
+      papa:'José Sánchez',
+      mama:'Yolanda Soto',
     },
     padrinos:{
-      padrino:'',
-      madrina:'',
+      padrino:'Carmelo Rebolledo',
+      madrina:'Yazmin Ascencio',
     },
-    confirmacion:{
-      novio:'',
-      novia:''
-    },
+    confirmacion: [
+      {
+        id: 'novio',
+        label: 'Confirmar con el Novio',
+        telefono: '7331585936',
+        icono:'novio'
+      },
+      {
+        id: 'novia',
+        label: 'Confirmar con la Novia',
+        telefono: '7331533106',
+        icono:'novia'
+      }
+    ]
   },
   
   bautizo:{
-    type:'',
+    type:'bautizo',
     nombre:'',
     padres:{
       papa:'',
@@ -155,7 +166,14 @@ const tipoevento={
       padrino:'',
       madrina:''
     },
-    confirmacion:''
+    confirmacion: [
+      {
+        id: 'general',
+        label: 'Confirmar asistencia',
+        telefono: '3312345678',
+        icono:''
+      }
+    ]
   },
   
   xv:{
@@ -169,7 +187,14 @@ const tipoevento={
       padrino:'Héctor García Moreno',
       madrina:'Ana Margarita García Moreno'
     },
-    confirmacion:'9844088408' //PENDIENTWE
+    confirmacion: [
+      {
+        id: 'general',
+        label: 'Confirmar',
+        telefono: '3312345678',
+        icono:''
+      },
+    ]
   }
 }
 

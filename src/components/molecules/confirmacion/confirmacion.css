@@ -11,7 +11,7 @@
   font-family:var(--fuenteTerciaria);
   font-size:16px;
 }
-.card-confirmacion-boton{
+.card-confirmacion-boton-contenedor{
   margin-top:30px;
   width: 100%;
   display:flex;
@@ -19,7 +19,13 @@
   align-items:center;
   justify-content:center;
 }
-.card-confirmacion-boton button{
+.card-confirmacion-boton-contenedor2{
+  margin-top:30px;
+  width: 100%;
+  display:flex;
+  
+}
+.card-confirmacion-boton{
   background-color: var(--colorFondo);
   color: var(--colorTexto);
   border: none;
@@ -30,6 +36,10 @@
   font-size:16px;
   transition: background-color 0.3s ease;
 } 
+.card-confirmacion-boton-contenedor2 .card-confirmacion-boton{
+  flex:1;
+  margin:0 5px;
+}
 .formulario{
   max-height: 0;
   overflow: hidden;

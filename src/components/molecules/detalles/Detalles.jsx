@@ -82,7 +82,7 @@ const Detalles = ({tituloImagen, anchoImagen, titulo, detalles})=>{
               ))
               
             }
-            <Banner ajustes={{imagen:'./img/dress.webp', anchoImagen:'100%', anchoContenedor:'100%', clase:'banner-dress'}} />
+            
           </ul>
         </div>
       </Card>
