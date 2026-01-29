@@ -21,7 +21,7 @@
 }
 .card-header h2{
   text-align:center;
-  color:#acacac;
+  color:var(--volorSecundario);
   font-style:italic;
   font-size:18px;
 }
@@ -37,7 +37,7 @@
   
   text-align:center;
   font-family: var(--fuenteSecundaria);
-  color:#acacac;
+  color:var(--volorSecundario);
   font-size:18px;
 }
 .card-papas p:last-of-type{
@@ -70,7 +70,7 @@
 .card-horarios-titulo{
   font-size: 24px;
   font-family: var(--fuenteSecundaria);
-  color:#acacac;
+  color:var(--volorSecundario);
 }
 .card-horarios-item h2{
   font-size:16px;

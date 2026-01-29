@@ -129,7 +129,12 @@ const Invitacion = () => {
             }}
             duracion={1}
           >
-            <Imagen ajustes={{imagen:'./img/monograma.webp'}} />
+            <Banner ajustes={{
+                      imagen:'./img/monograma/2.webp', 
+                      anchoImagen:'100%', 
+                      anchoContenedor:'100%', 
+                      clase:'banner-monograma', 
+                      altoContenedor:'auto'}} />
             <h2>Celebremos juntos el día:</h2>
             <h1>{`${data.fechaDia} de ${data.fechaMes} de ${data.fechaYear}`}</h1>
             <div><Imagen ajustes={{imagen:'./img/flor1.webp', ancho:'80%'}} /></div>

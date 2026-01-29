@@ -16,7 +16,7 @@
 .contador-titulo-contenedor h3{
   font-family:var(--fuenteSecundaria);
   font-size:40px;
-  color:#acacac;
+  color:var(--colorSecundario);
 }
 .contador-titulo-contenedor p{
   margin-top:-15px;

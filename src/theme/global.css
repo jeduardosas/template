@@ -42,3 +42,41 @@
 .redondoAbajoDerecha{
   border-bottom-right-radius: 10px;
 }
+
+/*DIFUMINAR IMAGENES*/
+.difuminar-abajo{
+  display: block;
+  max-width: 100%;
+    
+    /* Máscara de degradado - se funde con el fondo */
+  mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 90%,    /* Opaco en el 70% superior */
+        rgba(0,0,0,0) 100%    /* Transparente en el 30% inferior */
+  );
+  -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 90%,
+        rgba(0,0,0,0) 100%
+  );
+}
+.difuminar{
+  display: block;
+  max-width: 100%;
+
+  /* Máscara de degradado - se funde con el fondo */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,      /* Transparente en la parte superior */
+    rgba(0,0,0,1) 10%,     /* Empieza a ser opaco al 10% */
+    rgba(0,0,0,1) 90%,     /* Se mantiene opaco hasta el 90% */
+    rgba(0,0,0,0) 100%     /* Transparente en la parte inferior */
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
+    rgba(0,0,0,0) 100%
+  );
+}

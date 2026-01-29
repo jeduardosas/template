@@ -32,7 +32,7 @@
   margin-bottom:10px;
   font-size:16px;
   font-family:var(--fuenteTerciaria);
-  color:#acacac;
+  color:var(--colorSecundario);
 }
 .detalles-item div p{
   margin-bottom: 10px;

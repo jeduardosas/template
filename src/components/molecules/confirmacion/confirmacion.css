@@ -1,7 +1,7 @@
 /*CONFIRMACION */
 .card-confirmacion h3{
   text-align:center;
-  color:#acacac;
+  color:var(--colorSecundario);
   margin-bottom:30px;
   font-family: var(--fuenteSecundaria);
 

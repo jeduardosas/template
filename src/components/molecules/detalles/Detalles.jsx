@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Card from '../card/Card.jsx';
 import Boton from '../../atoms/button/Boton.jsx'
 import Banner from '../banner/Banner.jsx';
-import Imagen from '../../atoms/imagen/Imagen.jsx';
 import './detalles.css';
 
 const Detalles = ({tituloImagen, anchoImagen, titulo, detalles})=>{
@@ -16,7 +15,12 @@ const Detalles = ({tituloImagen, anchoImagen, titulo, detalles})=>{
         {
           tituloImagen ? (
             <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-              <Imagen ajustes={{imagen:`${titulo}`, ancho:`${anchoImagen}`}} />
+              <Banner ajustes={{
+                                    imagen:'./img/detalles/2.webp', 
+                                    anchoImagen:'100%', 
+                                    anchoContenedor:'100%', 
+                                    clase:'banner-monograma', 
+                                    altoContenedor:'auto'}} />
             </div>
           ):
           <h2>{titulo}</h2>
